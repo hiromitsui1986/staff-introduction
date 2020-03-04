@@ -1,0 +1,39 @@
+.warapper
+  = render 'members/header'
+  = render 'members/header.image'
+  .show-contents
+    .show-box
+      = image_tag @member.image.url, size: '300x300', class: "show-box__list"
+      .icon-class
+        %p いいね！
+        = fa_icon "thumbs-o-up", class: 'iine'
+      %ul
+        %li    
+          名前: 
+          = @member.name
+            
+        %li
+          所属:
+          = @member.affilition
+          
+        %li
+          出身地:
+          = @member.birthplace
+          
+        %li
+          生年月日:
+          = @member.birthday
+          
+        %li
+          特技:
+          = @member.hobby
+          
+        %li
+          メッセージ:
+          = @member.message
+
+    .fix
+      = link_to "削除します", member_path(@member.id), method: :delete
+
+
+  = render 'members/footer'     

@@ -1,0 +1,29 @@
+.post
+  .post-box
+    .post-member
+      %p.post-member__list
+        メンバー登録
+    .post-form 
+      = form_for @member do |f|
+        %label.post-form__name 写真  
+        = f.file_field :image, name: "image"
+      
+        %p.post-form__name 名前
+        %input{name: "name", placeholder: "name", type: "string",class: "post-form__name"}
+
+        %p.post-form__name 所属
+        %input{name: "affilition", placeholder: "affilition", type: "string",class: "post-form__name"}
+
+        %p.post-form__name 出身地
+        %input{name: "birthplace", placeholder: "birthplace", type: "string",class: "post-form__name"}
+
+        %p.post-form__name 生年月日
+        %input{name: "birthday", placeholder: "birthday", type: "date",class: "post-form__name"}
+
+        %p.post-form__name 特技
+        %input{name: "hobby", placeholder: "hobby", type: "string",class: "post-form__name"}
+
+        %p.post-form__name メッセージ
+        %textarea{cols: "90", name: "message",placeholder: "message",rows: "3", type: "text"}
+        %input{type: "submit", value: "登録", id: "buttom", method: :post}
+        

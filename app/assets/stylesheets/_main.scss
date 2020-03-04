@@ -1,0 +1,72 @@
+.main-member{  
+  background-image:url();
+  background-size:  cover;  
+  padding: 50px 80px 0 80px; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  
+  nav{
+    font-size: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 43%;
+    color: black;
+  }
+  a{
+    color:black;
+    text-decoration: none; 
+  }
+
+  .main-member-box{
+    margin: 50px 80px;
+    height: 100%;
+    
+    .main-member-box-list{
+      height: 600px;
+      
+      &__left{
+        float: left;
+        width: 50%; 
+        height: 600px; 
+            
+        &__name{
+          margin: 2em auto;
+          padding: 1em;
+          width: 70%; /* ボックス幅 */
+          background-color: #fff; /* ボックス背景色 */
+          color: #666; /* 文章色 */
+          box-shadow: 0 0 5px 1px #c0c0c0; /* 影 */
+          border-radius: 10px;
+          &--image{
+            padding: 10px 120px 10px 120px;
+          }
+          .icon-class{
+            color: blue;
+            display: flex;
+            font-size: 20px;
+            padding: 5px 0px;
+            justify-content: center;
+            
+          }
+          ::before{
+            line-height: 33px;
+            height: 30px;
+            width: 30px;
+          }
+          
+          li{
+            font-size: 20px;
+            padding: 5px 0;
+            letter-spacing: 5px;
+          }
+          li:last-child{
+            height: 100px;
+          }
+        }        
+      }
+    }
+  }   
+}  

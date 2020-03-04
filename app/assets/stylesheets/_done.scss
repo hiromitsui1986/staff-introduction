@@ -1,0 +1,39 @@
+.contents{
+  height: 50vh;
+  .content-box{
+    margin: 50px 100px;
+    &__style{
+      text-align: center;
+      font-size: 24px;
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      color: #6091d3;/*文字色*/
+      background: #FFF;
+      border: solid 3px #6091d3;/*線*/
+      border-radius: 10px;/*角の丸み*/
+    }
+
+    p {
+      margin: 0; 
+      padding: 0;
+    }
+
+    &__top{
+      text-align: center;
+      font-size: 24px;
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      font-weight: bold;
+      background: #FFF;
+      border: solid 3px #6091d3;/*線*/
+      border-radius: 10px;/*角の丸み*/
+      &--font{
+        margin: 0; 
+        padding: 0;
+        color: #6091d3;/*文字色*/
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.warapper{
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  .header{   
+    height: 80px;
+    background-color: #FFEBCD;
+    .header-contents{
+      font-size: 24px;   
+      height: 100%;
+      &__name{
+        float: left;
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        line-height: 80px;
+      }
+      &__tel {
+        float: right;
+        width: 50%;
+        height: 100%;
+        line-height: 80px;
+      }
+      &__path{
+        float: right; 
+        
+      }
+      .post{       
+        text-decoration: none;
+        margin: 50px;      
+        color: black;
+        border: solid 2px black;
+        border-radius: 3px;   
+        padding: 5px;   
+      }  
+      .post:hover {
+        background: #67c5ff;
+        color: white;
+      }      
+      .post:last-child{
+        margin: 50px 50px 50px 0;
+      }
+    }
+  }
+}  
+  
+  

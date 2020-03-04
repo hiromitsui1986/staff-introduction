@@ -1,0 +1,47 @@
+.contents.row{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(https://cdn.pixabay.com/photo/2018/01/20/08/01/craftsmen-3094035_1280.jpg);
+  .contents-row-text{
+    position: absolute;
+    top: 100px;
+    left: 370px;
+    width: 400px;
+    height: 600px;
+    width: 700px;
+    h1{
+      font-size: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .field{
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }  
+    input{
+      margin-top: 10px;
+    }
+    .actions{
+      margin-top: 10px;
+      text-align: center;
+      height: 50px;
+    }
+    input.actions__btn{
+      border: none;
+      font-size: 20px; 
+      display: inline-block;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: #67c5ff;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;      
+    } 
+    input.actions__btn:hover {
+      background: #67c5ff;
+      color: white;
+    }
+  }
+}

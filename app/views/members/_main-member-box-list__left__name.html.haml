@@ -1,0 +1,32 @@
+.main-member-box-list__left
+  .main-member-box-list__left__name
+    = link_to edit_member_path(member.id) do
+      = image_tag member.image.url, size: '150x150', class: "main-member-box-list__left__name--image"
+    .icon-class
+      %p いいね！
+      = fa_icon "thumbs-o-up", class: 'iine'
+    %ul
+      %li<      
+        名前: 
+        = member.name
+          
+      %li<
+        所属:
+        = member.affilition
+        
+      %li<
+        出身地:
+        = member.birthplace
+        
+      %li<
+        生年月日:
+        = member.birthday
+        
+      %li<
+        特技:
+        = member.hobby
+        
+      %li<
+        メッセージ:
+        = member.message
+          

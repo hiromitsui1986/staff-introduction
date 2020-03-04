@@ -1,0 +1,9 @@
+.main-member 
+  = paginate(@members)
+  .main-member-box
+    .main-member-box-list
+      - @members.each do |member| 
+        = render partial: "main-member-box-list__left__name", locals: { member: member }
+      
+
+      

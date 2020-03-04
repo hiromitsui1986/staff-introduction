@@ -1,0 +1,70 @@
+.show-contents{
+  height: 900px;
+  padding: 100px 300px;
+  .show-box{
+    height: 900px;
+    border: solid;
+    border-radius: 10%;
+    border-color: blue;
+    &__list{
+      margin: 50px 265px 25px 265px;
+      text-align: center;
+    }
+    .icon-class{
+      font-size: 25px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+    }
+    p{
+      color: blue;
+    }
+    ::before{
+      position: absolute;
+      top: 6px;
+    }
+    li{
+      margin: 10px 0;
+      height: 40px;
+      font-size: 25px;
+      text-align: center;
+    }
+    li:last-child{
+      height: 170px;
+    }
+  }
+  .fix{
+    height: 50px;
+    text-align: center;
+    margin-top: 25px;
+  }
+  a{ 
+    width: 200px;
+    font-size: 24px;
+    padding: 0.5em 1em;
+    margin: auto;
+    position: relative;
+    font-weight: bold;
+    padding: 0.25em 0;
+    text-decoration: none;
+    color: #67c5ff;
+    text-decoration: none;
+  } 
+  a:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top: 100%;
+    left: 0;
+    border-radius: 3px;
+    background: #67c5ff;
+    transition: .2s;
+  }  
+  a:hover:before {
+    top: -webkit-calc(100% - 3px);
+    top: calc(100% - 3px);
+  } 
+  
+}
