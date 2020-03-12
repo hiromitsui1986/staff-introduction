@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root "members#index"
 
   resources :members, only: [:index, :new, :create, :edit, :destroy]
+
   
 end
