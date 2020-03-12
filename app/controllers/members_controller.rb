@@ -3,15 +3,16 @@ class MembersController < ApplicationController
   before_action :sign, except: :index
 
   def index 
-    @members = Member.order("created_at DESC").page(params[:page]).per(4)
+    @members = Member.order("created_at DESC").page(params[:page]).per(2)
   end
 
   def new
-    @member = Member.new
+    @member = Member.new 
   end
   
-  def create
+  def create 
     @members = Member.create(member_params)
+    redirect_to root_path
   end
 
   def edit
@@ -26,7 +27,7 @@ class MembersController < ApplicationController
 
   private
   def member_params
-    params.permit(:id, :name, :affilition, :birthplace, :birthday, :hobby, :message, :image)
+    params.require(:member).permit(:id, :name, :birthplace, :birthday, :hobby, :message, :image)
   end
 
   def sign

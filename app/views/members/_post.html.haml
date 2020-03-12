@@ -4,26 +4,25 @@
       %p.post-member__list
         メンバー登録
     .post-form 
-      = form_for @member do |f|
-        %label.post-form__name 写真  
-        = f.file_field :image, name: "image"
+      = form_with model: @member, url: members_path do |f|
+        .post-form__name 写真  
+        = f.file_field :image, class: "post-form__boxes"
       
-        %p.post-form__name 名前
-        %input{name: "name", placeholder: "name", type: "string",class: "post-form__name"}
+        .post-form__name 名前
+        = f.text_field :name, class: "post-form__boxes"
+          
+        .post-form__name 出身地
+        = f.text_field :birthplace, class: "post-form__boxes"
 
-        %p.post-form__name 所属
-        %input{name: "affilition", placeholder: "affilition", type: "string",class: "post-form__name"}
+        .post-form__name 生年月日
+        = f.date_field :birthday, class: "post-form__boxes"
 
-        %p.post-form__name 出身地
-        %input{name: "birthplace", placeholder: "birthplace", type: "string",class: "post-form__name"}
+        .post-form__name 特技
+        = f.text_field :hobby, class: "post-form__boxes"
 
-        %p.post-form__name 生年月日
-        %input{name: "birthday", placeholder: "birthday", type: "date",class: "post-form__name"}
-
-        %p.post-form__name 特技
-        %input{name: "hobby", placeholder: "hobby", type: "string",class: "post-form__name"}
-
-        %p.post-form__name メッセージ
-        %textarea{cols: "90", name: "message",placeholder: "message",rows: "3", type: "text"}
-        %input{type: "submit", value: "登録", id: "buttom", method: :post}
+        .post-form__name メッセージ
+        = f.text_area :message, class: "post-form__boxes"
+        
+        .post-form__name
+        = f.submit "登録", class: "post-form__boxes"
         

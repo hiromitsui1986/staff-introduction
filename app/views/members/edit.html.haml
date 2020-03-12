@@ -1,6 +1,6 @@
 .warapper
   = render 'members/header'
-  = render 'members/header.image'
+  = render 'members/header-image'
   .show-contents
     .show-box
       = image_tag @member.image.url, size: '300x300', class: "show-box__list"
@@ -11,10 +11,6 @@
         %li    
           名前: 
           = @member.name
-            
-        %li
-          所属:
-          = @member.affilition
           
         %li
           出身地:
