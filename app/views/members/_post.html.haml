@@ -12,7 +12,7 @@
         = f.text_field :name, class: "post-form__boxes"
           
         .post-form__name 出身地
-        = f.text_field :birthplace, class: "post-form__boxes"
+        = f.select :birthplace, [["福岡", "福岡"], ["佐賀", "佐賀"], ["長崎", "長崎"], ["大分", "大分"], ["熊本", "熊本"], ["宮崎", "宮崎"], ["鹿児島", "鹿児島"], ["沖縄", "沖縄"]], include_blank: "選択して下さい"
 
         .post-form__name 生年月日
         = f.date_field :birthday, class: "post-form__boxes"
@@ -21,7 +21,7 @@
         = f.text_field :hobby, class: "post-form__boxes"
 
         .post-form__name メッセージ
-        = f.text_area :message, class: "post-form__boxes"
+        = f.text_area :message, class: "post-form__box"
         
         .post-form__name
         = f.submit "登録", class: "post-form__boxes"

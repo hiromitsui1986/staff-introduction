@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
 
-  before_action :sign, except: :index
+  before_action :sign, except: [:index, :show]
 
   def index 
     @members = Member.order("created_at DESC").page(params[:page]).per(2)
@@ -22,7 +22,10 @@ class MembersController < ApplicationController
   def destroy
     member = Member.find(params[:id])
     member.destroy
-    
+  end
+
+  def show
+    @members = Member.order("RAND()").limit(1)
   end
 
   private

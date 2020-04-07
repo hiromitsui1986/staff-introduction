@@ -1,0 +1,27 @@
+- @members.each do |member|
+  .show-contents-box
+    .show-contents
+      .show-box
+        = image_tag member.image.url, size: '300x300', class: "show-box__list"
+        %ul
+          %li    
+            名前: 
+            = member.name
+            
+          %li
+            出身地:
+            = member.birthplace
+            
+          %li
+            生年月日:
+            = member.birthday
+            
+          %li
+            特技:
+            = member.hobby
+            
+          %li
+            メッセージ:
+            = member.message
+
+      
