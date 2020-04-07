@@ -1,14 +1,15 @@
 .show-contents{
-  height: 900px;
+  height: 700px;
   padding: 100px 300px;
+  margin: 0px 110px;
   .show-box{
-    height: 900px;
+    height: 700px;
+    width: 600px;
     border: solid;
     border-radius: 10%;
-    border-color: blue;
-    &__list{
-      margin: 50px 265px 25px 265px;
-      text-align: center;
+    border-color: #67c5ff;
+    img{
+      padding: 20px 150px;
     }
     .icon-class{
       font-size: 25px;
